@@ -174,7 +174,8 @@
 	.mid {padding: 25px 0 20px; text-align: center;
     .inside.narrow{width:60%;}
     h4{margin-bottom: 5px;font-weight: bold; }
-    p{margin-top: 0;}
+    p{margin: 0;}
+    p.fp{color: $blue; font-size: 14px; font-style: italic;}
   }
 
 	.btm {background-color: darken($blue, 20%);
@@ -240,7 +241,9 @@
     border-top: 10px solid $blue; padding-top:0;
     &::before {display: none;}
     .top {display: none;}
-    .mid {padding-bottom: 0;}
+    .mid {padding-bottom: 0;
+      p.fp{margin-bottom: 20px;}
+    }
   }
 
   @include bp(sm) {
