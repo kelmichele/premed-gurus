@@ -79,73 +79,6 @@ hr{
 
 
 //*********************************//
-//*********** temp home ***********//
-//*********************************//
-// .home {
-// 	.tmp-open-sec{@include sec-default(); @include sec-bgimage('gurus-bg.jpg');
-// 		height:100vh; background-size: cover; background-position: center center;
-// 		position: relative; z-index: 0;
-
-// 		// &::before {@include before();
-// 		// 	// background-color: rgba(44,56,66,.7);
-// 		// 	background-color: rgba($grayish,.8);
-// 		// }
-// 		&::before {@include before();
-// 		 background-color: rgba($grayish, .7);
-// 		}
-// 	}
-// 	.tos-inside {
-// 		text-align: center; margin-top:15%;
-// 		&::before{@include before(); background-color: rgba($f7,.5);}
-
-// 		.intro-logo {width:650px; @include center-block();}
-// 		h2{color: $white; font-weight:600;width:28%; @include center-block(); border:3px solid $white; padding:10px;
-// 			font-size: 1.7rem;
-// 		 @include tshadowc(0px 1px 2px, rgba($black, .4));
-// 		}
-// 	}
-
-// 	@include bp(dt) {
-// 		.tos-inside {
-// 			h2{width:25%;}
-// 		}
-// 	}
-
-// 	@include bp(tb) {
-// 		.tos-inside {
-// 			h2{width:30%; font-size: 1.5rem;}
-// 		}
-// 	}
-
-// 	@include bp(tn) {
-// 		.tos-inside {
-// 			h2{width:40%;}
-// 		}
-// 	}
-
-// 	@include bp(mb) {
-// 		.tos-inside {
-// 			h2{width:50%; }
-// 		}
-// 	}
-
-// 	@include bp(md) {
-// 		.tos-inside {padding: 20px;
-// 			.intro-logo {width:80%;}
-// 			h2{font-size: 1.1rem;}
-// 		}
-// 	}
-
-// 	@include bp(sm) {
-// 		.tos-inside {
-// 			.intro-logo {width:90%;}
-// 			h2{width:80%;}
-// 		}
-// 	}
-// }
-
-
-//*********************************//
 //*********** home ***********//
 //*********************************//
 // NOTES -- if home nav is diff, ::before {height: 72%; margin-top:15%;} //
@@ -205,7 +138,7 @@ hr{
 		.gu-link {float: left; @include tshadowl(rgba($black, .3)); font-weight: bold;}
 
 
-		.full{@include sec-default(); @include sec-bgimage('tmp-doc-whitebg.png'); background-size: 30%; background-position: bottom right;
+		.full{@include sec-default(); @include sec-bgimage('doc-whitebg.png'); background-size: 30%; background-position: bottom right;
 			padding-bottom: 80px;
 		}
   }
@@ -563,7 +496,6 @@ hr{
 //*********** services ***********//
 //*********************************//
 .services{
-	.fullsec {@include sec-default(); height: 400px; background-color: $pink; @include sec-bgimage('ph-new.jpg'); background-size:50%;}
 
 	h1 {margin-bottom: 0; font-weight: 600}
 	.over {width: 68%; @include center-block();
@@ -573,8 +505,9 @@ hr{
 
 	.details{@include sec-default(); padding:80px 0;
 		.inside.medi {width:1080px}
-  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('ph-new2.jpg');
-  		background-size: 45%; background-position: center right;
+  	.sec {@include sec-default(); padding: 40px 0 60px;
+  		@include sec-bgimage('ph-new2.jpg'); background-size: 45%; background-position: center right;
+  		@include sec-bgimage('gurus-bg.jpg'); background-size: 45%; background-position: center right;
   	}
 
 		.text{width: 50%; float: left; margin-bottom: 20px;
@@ -840,7 +773,7 @@ hr{
 
 	.details{@include sec-default(); padding:60px 0;
 		.inside.medi{width:1080px;}
-  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('tmp-d.jpg'); background-size: 43%; background-position: top right;}
+  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('doorway.jpg'); background-size: 43%; background-position: top right;}
 		.text{width: 55%; float: left; margin-top:0px; margin-bottom: 10px;
 			&.dos {margin-top: 25px;}
 			p{padding-right: 15px;}
@@ -1203,7 +1136,7 @@ hr{
 .consultations {
 	.top-sec {@include sec-default(); text-align: center; padding-top:40px;}
 	.details{@include sec-default(); padding:60px 0 ;
-  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('tmp-student.jpg'); background-size: 42%; background-position: center right;}
+  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('student-pass.jpg'); background-size: 42%; background-position: center right;}
 		.text{width: 56%; float: left; margin-top:0px; margin-bottom: 25px;
 			&.dos {margin-top: 25px;}
 			p{padding-right: 15px; margin:10px 0 10px;font-size:17px;}
@@ -1290,7 +1223,7 @@ form.new_contract  {
 .contracts, .hire-gurus {
 	h1 {margin-bottom: 0; font-weight: bold;}
 	.details{@include sec-default(); padding:20px 0;
-  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('tmp-bp.jpg'); background-size: 33%; background-position: center right;}
+  	.sec {@include sec-default(); padding: 40px 0 60px;@include sec-bgimage('bp-bg.jpg'); background-size: 33%; background-position: center right;}
 		.text{width: 64%; float: left; margin-top:0px; margin-bottom: 10px;
 			&.dos {margin-top: 25px;}
 			p{padding-right: 15px; margin:10px 0 10px;}
@@ -1365,7 +1298,7 @@ form.new_contract  {
 		background-color: $white;
 		.inside.med2 {width: 940px;}
   	.sec {@include sec-default(); padding: 80px 0 60px;
-  		@include sec-bgimage('tmp-b2.jpg'); background-size: 55%; background-position: bottom right;
+  		@include sec-bgimage('grad-books-tall.jpg'); background-size: 55%; background-position: bottom right;
   	}
 		.text{width: 42%; float: left; margin-top:0px; margin-bottom: 10px;
 			&.dos {margin-top: 25px;}
