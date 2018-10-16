@@ -1,0 +1,69 @@
+<% @page_title = "Our Advisors" %>
+<% @page_description = "New Description" %>
+
+<div class="ipage-header">
+	<div class="inside">
+		<h1 class="tmargin0 bmargin0">Our Advisors</h1>
+		<h2 class="tmargin0">The PreMed Gurus Advantage</h2>
+		<div class="title-line center"></div><div class="clearfix"></div>
+	</div>
+
+	<div class="intro">
+		<div class="inside narrow">
+			<p>Our excellence is built upon the strength of our professional advisors.
+			Our advisors all possess advanced degrees, and bring many years of experience guiding and teaching pre-medical students. We have a life-long commitment to helping qualified, motivated applicants reach their goal of a career in medicine.</p>
+
+		<!-- 	<p class="dec">
+				Our entire staff consults on every applicant’s case, at each step in the process.
+
+				Your credentials, Personal Statement, AMCAS activities, and secondary applications will be reviewed and edited by professionals who have reviewed thousands of these important components. -->
+
+				<!-- We are committed to assisting motivated, talented individuals become qualified applicants to medical school. -->
+			<!-- </p> -->
+		</div>
+	</div>
+</div>
+
+<div class="color">
+	<div class="inside medi">
+		<p class="dec">Our entire staff consults on every applicant’s case, at each step in the process. Your credentials, Personal Statement, AMCAS activities, and secondary applications will be reviewed and edited by professionals who have reviewed thousands of these important components.</p>
+	</div>
+</div>
+
+<div class="advisor-content">
+	<div class="inside medi">
+
+		<!-- <div class="tall"> -->
+			<div class="listing tall">
+				<%= image_tag('dr-azita.jpg', class: 'bio-pic', alt: 'PreMed Gurus CEO, Dr. Azita Moalemi, M.D.') %>
+				<div class="info">
+					<h3>Dr. Azita Moalemi, M.D. <br><span>CEO</span></h3>
+					<div class="bio"><a class="gu-link" href="#am-bio" uk-toggle>View Full Bio</a></div>
+				</div>
+			</div>
+		<!-- </div> -->
+
+		<!-- <div class="wide"> -->
+			<div class="listing wide top">
+				<%= image_tag('dr-bill.png', class: 'bio-pic', alt: 'PreMed Gurus Director, Dr. William J Higgins, Ph.D.') %>
+				<div class="info">
+					<h3>William J. (Bill) Higgins, Ph.D. <br><span>Managing Director</span></h3>
+					<div class="bio"><a class="gu-link" href="#wjh-bio" uk-toggle>View Full Bio</a></div>
+				</div>
+			</div>
+
+			<div class="listing wide two">
+				<%= image_tag('dr-brian.png', class: 'bio-pic', alt: 'PreMed Gurus Advisor, Dr. Brian Higgins, Ph.D.') %>
+				<div class="info">
+					<h3>Brian Higgins, Ph.D. <br><span>Title?</span></h3>
+					<div class="bio"><a class="gu-link" href="#bh-bio" uk-toggle>View Full Bio</a></div>
+				</div>
+			</div>
+		<!-- </div> -->
+
+	</div>
+</div>
+
+<%= render 'static_pages/am-bio' %>
+<%= render 'static_pages/wjh-bio' %>
+<%= render 'static_pages/bh-bio' %>

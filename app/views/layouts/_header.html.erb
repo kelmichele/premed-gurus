@@ -1,0 +1,18 @@
+<div class="header-block">
+	<header>
+	  <div class="mid-logo">
+		  <%= link_to(image_tag('guru-logo.png', class: 'img-responsive hlogo'), home_full_path )%>
+		</div>
+
+		<nav class="uk-navbar-container" uk-navbar>
+	  	<div class="full-navrow">
+		    <ul id="main-nav" class="site-nav uk-navbar-nav">
+		      <%= render 'layouts/nav' %>
+		    </ul>
+				<!-- <div class="email">info@premedgurus.com</div> -->
+			</div>
+
+      <%= render 'shared/mobile-nav' %>
+		</nav>
+	</header>
+</div>

@@ -1,0 +1,45 @@
+<footer class="full-footer">
+	<div class="inside">
+		<div class="top">
+			<ul class="foot-nav one">
+				<li class="home"><%= link_to 'Home', home_full_path %></li>
+				<li class="mobile-serve"><%= link_to 'Services', services_path  %></li>
+				<li class="mobile-serve"><%= link_to 'Advising For Universities', university_advising_path  %></li>
+			</ul>
+
+			<ul class="foot-nav two">
+				<li><%= link_to 'Advisors', advisors_path %></li>
+				<li><%= link_to 'Request a Consult', consultation_path %></li>
+				<li><%= link_to 'Hire the Gurus', hire_gurus_path %></li>
+				<!-- <li><%= link_to 'Hire the Gurus', contract_path %></li> -->
+			</ul>
+		</div>
+	</div>
+
+	<div class="mid">
+		<div class="inside narrow">
+			<h4>Your Path to Medical School</h4>
+			<p>
+				<!-- The professional staff of KamiMed’s PreMed Gurus is committed to assisting motivated,
+				talented individuals become qualified applicants to medical school and ultimately physicians.-->
+				PreMed Gurus provides a complete range of services for aspiring physicians at every stage of
+				the process, beginning in the early undergraduate years and continuing through the final
+				selection of a medical school.
+				<!-- Our excellence is built upon the strength of its professional
+				advisors with advanced degrees who have taught and advised generations of premedical
+				students and, in some cases, served as faculty at medical schools. This experience supported by
+				its wealth of unique online resources, including the book Gaining Admission to Medical School,
+				makes PreMed Gurus the clear choice for premedical advice. -->
+			</p>
+		  <a class="to-top" href="#main-nav" uk-scroll>Back to Top <span uk-icon="icon: arrow-right"></span></a>
+		</div>
+	</div>
+
+	<div class="btm">
+		<div class="inside lg">
+			<p class="copy">Copyright <%= Time.now.year %> PreMed Gurus. All rights reserved. </p>
+			<p class="hs">Design by <%= link_to "High Seas Design House.", 'https://hsdesignhouse.com', target: '_blank' %> </p>
+		</div>
+	</div>
+  <a href="#" uk-totop uk-scroll></a>
+</footer>

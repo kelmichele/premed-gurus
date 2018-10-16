@@ -1,0 +1,20 @@
+<li><%= link_to 'Home', home_full_path %></li>
+
+<li class="fw-serve">
+	<a>Our Services</a>
+	<div class="uk-navbar-dropdown">
+    <ul class="uk-nav uk-navbar-dropdown-nav">
+			<li><%= link_to 'For Students', services_path  %></li>
+			<li><%= link_to 'For Universities', university_advising_path  %></li>
+    </ul>
+  </div>
+</li>
+
+<li class="mobile-serve"><%= link_to 'Services for Student', services_path  %></li>
+<li class="mobile-serve"><%= link_to 'Advising For Universities', university_advising_path  %></li>
+
+<li><%= link_to 'Our Advisors', advisors_path %></li>
+<li><%= link_to 'Request a Consult', consultation_path %></li>
+<li><%= link_to 'Hire the Gurus', hire_gurus_path %></li>
+<!-- <li><%= link_to 'Hire the Gurus', contract_path %></li> -->
+<li class="email"><a href="mailto:info@premedgurus.com">info@premedgurus.com</a></li>

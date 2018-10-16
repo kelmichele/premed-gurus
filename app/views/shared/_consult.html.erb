@@ -1,0 +1,83 @@
+<div id="modal-consult" class="custom-ms" uk-modal>
+  <div class="uk-modal-dialog" uk-overflow-auto>
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div class="uk-modal-header">
+          <h2 class="uk-modal-title">Request a Phone Consult</h2>
+      </div>
+
+      <div class="uk-modal-body">
+      	<p>To request an initial phone consultation about our services, please provide the following information. You may complete the form online, or download a copy and email it to us at <a href="">info@premedgurus.com</a></p>
+      </div>
+
+      <div class="uk-modal-footer uk-text-right">
+        <!-- <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button> -->
+        <button class="uk-button uk-button-primary" type="button"><a href="New Client Info Form.pdf" class="dl-btn" target="_blank">Download</a></button>
+      </div>
+
+      <div class="uk-modal-body">
+      	<%= form_tag do |f| %>
+        	<div class="form-group">
+        		<label>Name:</label><br>
+		        <%= text_field :name, class: "form-control", placeholder: "Name", autofocus: true %>
+		      </div>
+
+	        <div class="form-group">
+	        	<label>Address:</label><br>
+		        <%= text_field :address, class: "form-control", placeholder: "Address", autofocus: true %>
+		      </div>
+
+	        <div class="form-group">
+	        	<label>Email:</label><br>
+		        <%= text_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
+		      </div>
+
+	        <div class="form-group">
+	        	<label>Phone:</label><br>
+		        <%= text_field :phone, class: "form-control", placeholder: "Phone", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>College:</label><br>
+		        <%= text_field :college, class: "form-control", placeholder: "College", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Major(s):</label><br>
+		        <%= text_field :major, class: "form-control", placeholder: "Major(s)", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Year in school or in the application process::</label><br>
+		        <%= text_field :year, class: "form-control", placeholder: "Sophomore", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Expected month and year of graduation::</label><br>
+		        <%= text_field :grad, class: "form-control", placeholder: "May 2019", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Post Graduate:</label><br>
+		        <%= text_field :postgrad, class: "form-control", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Target application year (AMCAS submission year):</label><br>
+		        <%= text_field :target, class: "form-control", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Applied before? If so, when and what was the result?:</label><br>
+		        <%= text_field :app, class: "form-control", autofocus: true %>
+		      </div>
+
+		      <div class="form-group">
+	        	<label>Please provide any additional information you think may be relevant to our discussion, including GPA, Science GPA, MCAT scores, scheduled or potential future MCAT date, relevant personal situations, etc.</label><br>
+		        <%= text_area :extra, class: "form-control", autofocus: true %>
+		      </div>
+
+        	<button class="uk-button uk-button-default uk-modal-close" type="button">Submit</button>
+      	<% end %>
+      </div>
+  </div>
+</div>

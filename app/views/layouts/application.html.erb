@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PmGurus</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <%= favicon_link_tag 'favicon.png' %>
+    <!-- csrf_meta_tags  -->
+    <!-- csp_meta_tag  -->
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/css/uikit.min.css" />
+    <%= render 'layouts/rails-default' %>
+    <%= render 'layouts/shim' %>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.16/js/uikit-icons.min.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller_name %> <%= action_name %>">
+    <!-- <div class="special">
+      <div class="inside">
+        <p>We are now accepting a limited number of new clients for the 2019-2020 application cycle. Act quickly to secure our services and the 25% discount!</p>
+      </div>
+    </div> -->
+
+     <!-- if current_page?(home_full_path) %> -->
+      <!-- = render 'layouts/home-header' %> -->
+    <% if current_page?(root_path) %>
+    <% else %>
+    <%= render 'layouts/header' %>
+    <% end %>
+
+    <%= render 'shared/messages' %>
+
+    <div class="page-body">
+      <%= yield %>
+    </div>
+
+    <% unless current_page?(root_path) %>
+      <%= render 'layouts/footer' %>
+    <% end %>
   </body>
 </html>

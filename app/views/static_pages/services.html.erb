@@ -1,0 +1,260 @@
+<% @page_title = "Medical School Advising Services" %>
+<% @page_description = "New Description" %>
+
+
+<div class="details">
+	<div class="inside medi">
+		<div class="sec">
+			<h1><%= @page_title %></h1>
+			<div class="title-line"></div><div class="clearfix"></div>
+			<div class="text">
+				<p class="s2">PreMed Gurus offers our a complete range of services for premedical students. We address every element of the application process -- from completing the requirements, to completing the AMCAS, to the final selection of a medical school.
+				</p>
+
+				<p><span>Use the list below to learn more about each service we offer for students, or click <%= link_to "here", university_advising_path, class: 'text-link' %> to learn about our advising services for universities.</span></p>
+			</div>
+
+			<div class="abs">
+				<p>Please note that for a limited time, PreMed Gurus is offering a 20% discount on all services listed below to well qualified new clients. Prices shown below do not include discount.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="full-sec first">
+	<div class="banner">
+		<div class="inside medi">
+		<p class="uno">Get free access to the full, online version of the text <%= link_to "Gaining Admission to Medical School", book_details_path, class: 'text-link' %>, written by our managing director, William J Higgins, when you purchase any of our services listed below.</p>
+		</div>
+	</div>
+
+	<div class="inside cst">
+
+
+		<div uk-filter="target: .js-filter">
+			<div class="sidebar">
+		    <ul class="cat-list">
+			    <li class="side-menu uk-active" uk-filter-control="[data-tags*='all']"><a href="#">All Student Services</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='full']"><a href="#"><%= @full_title %></a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='assessment']"><a href="#">Advanced Assessment of Credentials</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='mcat']"><a href="#">MCAT Strategies</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='amcas']"><a href="#">AMCAS Application</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='essays']"><a href="#">Secondary Essays</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='interviews']"><a href="#">Interview Preparation</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='medschool']"><a href="#">Final Selection of Medical School</a></li>
+	        <li class="side-menu" uk-filter-control="[data-tags*='skills']"><a href="#">Learning Skills and Strategies</a></li>
+		    </ul>
+
+		    <ul class="additional">
+				  <li class="side-menu addit"><%= link_to "Request a Consult", consultation_path %></li>
+				  <li class="side-menu addit"><%= link_to "Hire the Gurus", hire_gurus_path %></li>
+				  <li class="side-menu addit"><a class="" href="#modal-fees" uk-toggle>Full Price List</a></li>
+				  <li class="side-menu addit"><%= link_to "Gaining Admission to Medical School", book_details_path %></li>
+		    </ul>
+		  </div>
+
+			<div class="main-sec">
+		    <ul class="js-filter" class="uk-grid-small uk-grid-match" uk-grid>
+	        <li data-tags="full" class="ukg-size full-pack">
+            <div class="uk-card uk-card-default">
+        	    <div class="uk-card-header">
+        	        <div class="uk-grid-small uk-flex-middle" uk-grid>
+      	            <div class="uk-width-expand">
+      	              <h3 class="uk-card-title uk-margin-remove-bottom">
+	      	              <!-- Complete Service Package -->
+	      	              We offer a Complete Service Package for first time applicants and reapplicants.
+      	            	</h3>
+      	            </div>
+        	        </div>
+        	    </div>
+
+        	    <div class="uk-card-body">
+								<p>
+									Both packages include each of the services listed below.<br>
+									Click <a class="text-link" href="#sequence" uk-toggle>here</a> to view the sequence of services for these packages.
+								</p>
+								<!--
+								(Credentials assessment through selecting the medical school)
+								Complete service for reapplication $12,000. -->
+              </div>
+
+              <div class="uk-card-footer price-ft">
+              	<p><b>Complete package - first time applicants</b> &nbsp; &nbsp; &nbsp; ... $15,000<br>
+              	<b>Complete package - reapplicants</b> &nbsp; &nbsp; &nbsp; ... $12,000</p>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="assessment all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+							<div class="uk-card-header">
+						    <div class="uk-grid-small uk-flex-middle" uk-grid>
+					        <div class="uk-width-expand">
+				            <h3 class="uk-card-title uk-margin-remove-bottom"><%= @assessment_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">$4,000</span>
+				            </h3>
+					        </div>
+						    </div>
+							</div>
+							<div class="uk-card-body">
+						    <%= render 'services/credentials' %>
+							</div>
+
+							<div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="mcat all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+        	    <div class="uk-card-header">
+        	        <div class="uk-grid-small uk-flex-middle" uk-grid>
+      	            <div class="uk-width-expand">
+    	                <h3 class="uk-card-title uk-margin-remove-bottom"><%= @mcat_title %>
+    	                	<br class="mb-down">
+					            	<span class="price">$2,500</span>
+				            	</h3>
+      	            </div>
+        	        </div>
+        	    </div>
+        	    <div class="uk-card-body">
+						    <%= render 'services/mcat' %>
+              </div>
+
+              <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="amcas all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+            	<div class="uk-card-header">
+				        <div class="uk-grid-small uk-flex-middle" uk-grid>
+			            <div class="uk-width-expand">
+			              <h3 class="uk-card-title uk-margin-remove-bottom"><%= @amcas_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">$5,000</span>
+			              </h3>
+			            </div>
+				        </div>
+					    </div>
+					    <div class="uk-card-body">
+				        <%= render 'services/amcas' %>
+					    </div>
+
+					    <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+					  </div>
+	        </li>
+
+	        <li data-tags="interviews all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+            	<div class="uk-card-header">
+				        <div class="uk-grid-small uk-flex-middle" uk-grid>
+			            <div class="uk-width-expand">
+		                <h3 class="uk-card-title uk-margin-remove-bottom"><%= @interviews_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">$2,000</span>
+		                </h3>
+			            </div>
+				        </div>
+					    </div>
+
+					    <div class="uk-card-body">
+						    <%= render 'services/interview' %>
+					    </div>
+
+					    <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="essays all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+        	    <div class="uk-card-header">
+      	        <div class="uk-grid-small uk-flex-middle" uk-grid>
+    	            <div class="uk-width-expand">
+  	                <h3 class="uk-card-title uk-margin-remove-bottom"><%= @essays_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">$3,000</span>
+  	                </h3>
+    	            </div>
+      	        </div>
+        	    </div>
+
+        	    <div class="uk-card-body">
+						    <%= render 'services/essays' %>
+        	    </div>
+
+        	    <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="medschool all full" class="ukg-size">
+            <div class="uk-card uk-card-default">
+            	<div class="uk-card-header">
+				        <div class="uk-grid-small uk-flex-middle" uk-grid>
+			            <div class="uk-width-expand">
+			              <h3 class="uk-card-title uk-margin-remove-bottom"><%= @school_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">$500</span>
+			              </h3>
+			            </div>
+				        </div>
+					    </div>
+
+					    <div class="uk-card-body">
+						    <%= render 'services/school' %>
+					    </div>
+
+					    <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+
+	        <li data-tags="skills all" class="ukg-size">
+            <div class="uk-card uk-card-default">
+            	<div class="uk-card-header">
+				        <div class="uk-grid-small uk-flex-middle" uk-grid>
+			            <div class="uk-width-expand">
+		                <h3 class="uk-card-title uk-margin-remove-bottom"><%= @skills_title %>
+  	                	<br class="mb-down">
+				            	<span class="price">Hourly contract; inquire for details.</span>
+		                </h3>
+			            </div>
+				        </div>
+					    </div>
+
+					    <div class="uk-card-body">
+						    <%= render 'services/skills' %>
+					    </div>
+
+					    <div class="uk-card-footer uk-text-right">
+				        <%= render 'shared/client-btns' %>
+					    </div>
+            </div>
+	        </li>
+		    </ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="mobile-services" uk-grid>
+		<div class="inside">
+			<%= render 'services/services-accord' %>
+		</div>
+	</div>
+</div>
+
+<!-- Fees Modal -->
+<%= render 'shared/fees' %>
+<%= render 'shared/sequence' %>

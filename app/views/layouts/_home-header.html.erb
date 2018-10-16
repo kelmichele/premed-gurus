@@ -1,0 +1,35 @@
+<div class="home-header" >
+	<header>
+    <nav class="uk-navbar-container" uk-navbar>
+  		<div class="inside nav-row">
+        <ul id="main-nav" class="one uk-navbar-nav">
+          <!-- <ul class="one"> -->
+        	<li><%= link_to 'Home', home_full_path %></li>
+          <li><%= link_to 'About Us', about_path %></li>
+        	<!-- <li><%= link_to 'Our Services', services_path %></li> -->
+          <li>
+            <a>Our Services</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><%= link_to 'For Students', services_path  %></li>
+                <li><%= link_to 'For Universities', university_advising_path  %></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div class="hd-logo">
+      	  <%= link_to(image_tag('guru-logo.png', class: 'img-responsive hlogo'), root_path )%>
+      	</div>
+
+        <ul class="two">
+          <li><%= link_to 'Our Advisors', advisors_path %></li>
+          <li><%= link_to 'Request a Consult', consultation_path %></li>
+          <li><%= link_to 'Hire the Gurus', contract_path %></li>
+        </ul>
+  		</div>
+    </nav>
+
+    <%= render 'shared/mobile-nav' %>
+	</header>
+</div>

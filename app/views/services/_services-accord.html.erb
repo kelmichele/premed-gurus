@@ -1,0 +1,114 @@
+<ul uk-accordion="multiple: true">
+  <li class="l1">
+   <!-- class="uk-open" -->
+    <a class="uk-accordion-title" href="#"><%= @assessment_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$4,000</p>
+      <%= render 'services/credentials' %>
+
+			<div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1">
+    <a class="uk-accordion-title" href="#"><%= @mcat_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$2,500</p>
+      <%= render 'services/mcat' %>
+
+			<div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1">
+    <a class="uk-accordion-title" href="#"><%= @amcas_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$5,000</p>
+      <%= render 'services/amcas' %>
+
+			<div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1">
+    <a class="uk-accordion-title" href="#"><%= @interviews_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$2,000</p>
+      <%= render 'services/interview' %>
+
+			<div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1">
+    <a class="uk-accordion-title" href="#"><%= @essays_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$3,000</p>
+      <%= render 'services/essays' %>
+
+			<div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1">
+    <a class="uk-accordion-title" href="#"><%= @school_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">$500</p>
+      <%= render 'services/school' %>
+
+      <div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1 final">
+    <a class="uk-accordion-title" href="#"><%= @skills_title %></a>
+    <div class="uk-accordion-content">
+      <p class="price">Hourly contract; inquire for details.</p>
+      <%= render 'services/skills' %>
+
+      <div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+	    </div>
+    </div>
+  </li>
+
+  <li class="l1 full-pack hh">
+    <a class="uk-accordion-title" href="#">Complete Service Package</a>
+    <div class="uk-accordion-content">
+      <h4>We offer a Complete Service Package for first time applicants and reapplicants. Both packages include the following services:</h4>
+      <ul>
+        <li>Advanced Assessment of Credentials</li>
+        <li>Medical College Admission Test (MCAT) Strategies</li>
+        <li>American Medical College Admissions Service (AMCAS) Application</li>
+        <li>Interview Preparation</li>
+        <li>Secondary Essays</li>
+        <li>Final Selection of Medical School</li>
+      </ul>
+
+      <p>Click <a class="text-link" href="#sequence" uk-toggle>here</a> to view the sequence of services for these packages.</p>
+      <p><b>Complete package - first time applicants</b> &nbsp; &nbsp; &nbsp; ... $15,000<br>
+      <b>Complete package - reapplicants</b> &nbsp; &nbsp; &nbsp; ... $12,000</p>
+
+      <div class="uk-card-footer uk-text-center">
+        <%= render 'shared/client-btns' %>
+      </div>
+    </div>
+  </li>
+
+  <li class="l1 full-pack nocon hh"><a class="uk-accordion-title" href="#modal-fees" uk-toggle>Full Price List</a></li>
+
+  <li class="l1 full-pack nocon"><%= link_to "Request a Consult", consultation_path, class: 'ext-link' %></li>
+  <li class="l1 full-pack nocon"><%= link_to "Hire the Gurus", hire_gurus_path, class: 'ext-link' %></li>
+</ul>
