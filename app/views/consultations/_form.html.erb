@@ -1,0 +1,92 @@
+<%= render 'shared/errors', obj: @consultation %>
+
+<%= form_for @consultation, url: consultation_path do |consultation| %>
+  <fieldset>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <% if flash[:alert] %>
+      <div class="notice"><%= flash[:alert] %></div>
+    <% end %>
+
+    <h3 class="sec-title">Personal</h3>
+    <hr>
+    <div class="form-group name">
+      <label>*Full Name:</label><br>
+      <%= consultation.text_field :name %>
+    </div>
+
+    <div class="form-group address">
+      <label>*Address:</label>
+      <%= consultation.text_field :address %>
+    </div>
+
+    <div class="form-group phone">
+      <label>*Phone: </label><br>
+      <%= consultation.text_field :phone %>
+    </div>
+
+    <div class="form-group email">
+      <label>*Email: </label><br>
+      <%= consultation.email_field :email %>
+    </div>
+
+    <h3 class="sec-title">Education</h3>
+    <hr>
+    <div class="form-group college">
+      <label>*College/University: </label><br>
+      <%= consultation.text_field :college %>
+    </div>
+
+    <div class="form-group major">
+      <label>*Major(s): </label><br>
+      <%= consultation.text_field :major %>
+    </div>
+
+    <div class="form-group school">
+      <label>*Year in School or Application Process: </label><br>
+
+      <%= consultation.select(:school_year) do %>
+        <% [['Select Year', ''], ['Freshman', 'freshman'], ['Sophomore', 'sophomore'], ['Junior', 'junior'], ['Senior', 'senior'], ['Post Graduate', 'postgrad']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="form-group ugrad">
+      <label>
+        *(Expected) month and year of graduation:
+        <!--  <br><b>(If Post Grad, month and year of graduation)</b>  -->
+      </label><br>
+      <%= consultation.text_field :graduation %>
+    </div>
+    <hr>
+
+    <div class="form-group target">
+      <label>*Target application year (AMCAS submission year): </label><br>
+      <%= consultation.text_field :target %>
+    </div>
+
+    <div class="form-group attempt2">
+      <label>Have you applied before? <b>If yes</b>, when and what was the result? </label><br>
+      <%= consultation.text_area :attempts  %>
+    </div>
+
+    <div class="form-group message">
+      <label>*Please provide any additional information you think may be relevant to our discussion, including GPA, Science GPA, MCAT scores, scheduled or potential future MCAT date, relevant personal situations, etc. </label>
+      <%= consultation.text_area :content %>
+    </div>
+
+    <div class="form-group honey">
+      <%= label_tag :honey %>
+      <%= consultation.text_field :honey %>
+      <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+    </div>
+
+    <div class="form-group submit">
+      <%= consultation.submit "Submit", :class=> "send-message" %>
+    </div>
+  </fieldset>
+  <p class="print">* indicates required field</p>
+<% end %>
