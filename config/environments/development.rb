@@ -35,6 +35,25 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'hsdesignhouse.com',
+    user_name:            Rails.application.credentials.gmail[:g_user],
+    password:             Rails.application.credentials.gmail[:g_pass],
+    authentication:       'plain',
+    enable_starttls_auto: true }
+
+    config.action_mailer.default_url_options = {
+    host: "hsdesignhouse.com"
+    }
+
+    config.action_mailer.default_options = {
+    from: "noreply@premedgurus.com"
+    }
+
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
