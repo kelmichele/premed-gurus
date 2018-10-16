@@ -24,13 +24,8 @@
       </div>
     </div> -->
 
-     <!-- if current_page?(home_full_path) %> -->
-      <!-- = render 'layouts/home-header' %> -->
-    <% if current_page?(root_path) %>
-    <% else %>
-    <%= render 'layouts/header' %>
-    <% end %>
 
+    <%= render 'layouts/header' %>
     <%= render 'shared/messages' %>
 
     <div class="page-body">

@@ -1,11 +1,155 @@
 <% @page_title = "Welcome to PreMed Gurus" %>
 <% @page_description = "New Description" %>
 
+<% @assessment_title = "Advanced Assessment of Credentials" %>
+<% @mcat_title = "MCAT Strategies" %>
+<% @amcas_title = "AMCAS Application" %>
+<% @essays_title = "Secondary Essays" %>
+<% @interviews_title = "Interview Preparation" %>
+<% @school_title = "Final Selection of Medical School" %>
+<% @skills_title = "Learning Skills and Strategies" %>
 
-<div class="tmp-open-sec">
-  <div class="tos-inside">
-    <h1 class="visually-hidden">Pre-Med Gurus</h1>
-    <%= image_tag('guru-logo.png', class: 'img-responsive intro-logo')%>
-    <h2>Website coming soon</h2>
+
+<div class="dbl-color-hero">
+  <div class="inside">
+    <%= image_tag 'student.jpg', class: 'hero-img img-responsive' %>
+  </div>
+
+  <div class="intro">
+    <h1 class="visually-hidden">PreMed Gurus</h1>
+    <h1>PreMed Gurus</h1>
+    <h2>your path to medical school</h2>
   </div>
 </div>
+
+<div class="hs1">
+  <div class="inside med2">
+    <div class="left">
+      <p>PreMed Gurus provides a complete range of services for aspiring physicians at every stage of the process, beginning in the early undergraduate years, and continuing through the final selection of a medical school.
+      </p>
+
+      <p>Our professional staff is committed to assisting motivated, talented individuals become qualified applicants to medical school, and ultimately physicians.</p>
+      <h3>We are now accepting a limited number of new clients for the 2019-2020 application cycle.</h3>
+    </div>
+
+    <div class="right">
+      <%= image_tag('tmp-grad-books.jpg', class: 'hs1-img', alt:'') %>
+      <%= image_tag('tmp-grad-books-mob.jpg', class: 'hs1-mobimg', alt:'') %>
+    </div>
+  </div>
+</div>
+
+<div class="banner lt">
+  <div class="inside lg">
+    <div class="box">
+      <div class="lefty">
+        <h3 class="border">Act Fast, <br>Save 20%!</h3>
+      </div>
+      <div class="inline">
+        <p>For a limited time only, PreMed Gurus is offering well-qualified, new clients a 20% discount off our student advising services.
+        Act quickly to secure your spot and your discount!</p>
+        <p>
+          Select any service from the list below for more information, or <%= link_to "click here", services_path, class: 'text-link' %>
+          to view our full list of services and prices.
+        </p>
+      </div>
+
+      <div class="link-row">
+        <%= link_to "Request Consult", consultation_path, class: 'gu-link' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="serve" uk-grid>
+  <div class="inside med2">
+    <div class="full">
+      <div class="stitle">
+        <ul class="uk-tab-left kptab" uk-tab="connect: #component-tab-left; animation: uk-animation-fade">
+          <li class="fw-stitle"><a href="#"><%= @assessment_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @mcat_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @amcas_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @interviews_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @essays_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @school_title %></a></li>
+          <li class="fw-stitle"><a href="#"><%= @skills_title %></a></li>
+          <li class="fw-stitle"><a href="#">Advising for Universities</a></li>
+        </ul>
+      </div>
+
+      <div class="sdesc">
+        <ul id="component-tab-left" class="uk-switcher">
+          <li><%= render 'services/credentials' %></li>
+          <li><%= render 'services/mcat' %></li>
+          <li class="amca"><%= render 'services/amcas' %></li>
+          <li><%= render 'services/interview' %></li>
+          <li><%= render 'services/essays' %></li>
+          <li><%= render 'services/school' %></li>
+          <li><%= render 'services/skills' %></li>
+          <li><p>PreMed Gurus will come to your campus and supplement your university’s premedical advising. Save faculty time and provide your students with the very best advice and most current information.</p>
+          <%= link_to "Learn More", university_advising_path, class: 'gu-link' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="small-full">
+      <%= render 'services/services-accord' %>
+    </div>
+  </div>
+</div>
+
+<div class="pbi">
+  <div class="inside med2">
+    <%= image_tag 'gurus-long.jpg', class: 'img-responsive' %>
+
+    <div class="text">
+      <p>The full online version of the text <%= link_to "Gaining Admission to Medical School", book_details_path, class: 'text-link alt' %>, written by our managing director, William J Higgins, is available for free when you purchase any of our services.</p>
+    </div>
+  </div>
+</div>
+
+<div class="advisors-alt">
+  <div class="inside med2">
+    <div class="full">
+      <div class="text">
+        <h3>Why Should You Choose Us?</h3>
+        <h4>The PreMed Gurus Advantage: <span>Our Advising Staff.</span></h4>
+        <div class="title-line"></div>
+
+        <p>Our advisors all possess advanced degrees, and bring many years of experience guiding and teaching pre-medical students.
+        We have a life-long commitment to helping qualified, deserving applicants reach their goal of a career in medicine.</p>
+
+        <p>Our entire staff consults on every applicant’s case at each step in the process.
+        Your credentials, Personal Statement, AMCAS activities, and secondary applications will be reviewed and edited by professionals who have reviewed thousands of these important components.</p>
+
+        <span class="quote">That’s why we say, “PreMed Gurus, your path to medical school.”</span></p>
+        <%= link_to "Meet Our Advisors", advisors_path, class: 'gu-link' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="display: none;">
+The PreMed Gurus advantage: our advising staff!
+Our advisers all possess advanced degrees and bring many years of experience advising and teaching pre-medical students.
+They have a life-long commitment to helping qualified, deserving applicants reach their goal of a career in medicine.
+The entire staff consults on every applicant’s case at each step in the process.
+Your credentials, Personal Statement, AMCAS activities, and secondary applications will be reviewed and edited by professionals who have reviewed thousands of these important components.
+That’s why we say, “PreMed Gurus, your path to medical school.”
+
+
+<p>Our excellence is built upon the strength of our professional advisors, each of whom possesses advanced degrees and a life-long commitment to helping qualified, deserving applicants reach their goal of a career in medicine.</p>
+<p>Our entire staff consults on every applicant’s case at each step in the process. We have taught and advised generations of premedical students, in many cases, serving as faculty at medical schools. This experience, supported by our wealth of unique online resources, makes PreMed Gurus the clear choice for premedical advice.</p>
+</div>
+
+
+
+
+
+
+
+
+
+

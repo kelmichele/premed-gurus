@@ -81,68 +81,68 @@ hr{
 //*********************************//
 //*********** temp home ***********//
 //*********************************//
-.home {
-	.tmp-open-sec{@include sec-default(); @include sec-bgimage('gurus-bg.jpg');
-		height:100vh; background-size: cover; background-position: center center;
-		position: relative; z-index: 0;
+// .home {
+// 	.tmp-open-sec{@include sec-default(); @include sec-bgimage('gurus-bg.jpg');
+// 		height:100vh; background-size: cover; background-position: center center;
+// 		position: relative; z-index: 0;
 
-		// &::before {@include before();
-		// 	// background-color: rgba(44,56,66,.7);
-		// 	background-color: rgba($grayish,.8);
-		// }
-		&::before {@include before();
-		 background-color: rgba($grayish, .7);
-		}
-	}
-	.tos-inside {
-		text-align: center; margin-top:15%;
-		&::before{@include before(); background-color: rgba($f7,.5);}
+// 		// &::before {@include before();
+// 		// 	// background-color: rgba(44,56,66,.7);
+// 		// 	background-color: rgba($grayish,.8);
+// 		// }
+// 		&::before {@include before();
+// 		 background-color: rgba($grayish, .7);
+// 		}
+// 	}
+// 	.tos-inside {
+// 		text-align: center; margin-top:15%;
+// 		&::before{@include before(); background-color: rgba($f7,.5);}
 
-		.intro-logo {width:650px; @include center-block();}
-		h2{color: $white; font-weight:600;width:28%; @include center-block(); border:3px solid $white; padding:10px;
-			font-size: 1.7rem;
-		 @include tshadowc(0px 1px 2px, rgba($black, .4));
-		}
-	}
+// 		.intro-logo {width:650px; @include center-block();}
+// 		h2{color: $white; font-weight:600;width:28%; @include center-block(); border:3px solid $white; padding:10px;
+// 			font-size: 1.7rem;
+// 		 @include tshadowc(0px 1px 2px, rgba($black, .4));
+// 		}
+// 	}
 
-	@include bp(dt) {
-		.tos-inside {
-			h2{width:25%;}
-		}
-	}
+// 	@include bp(dt) {
+// 		.tos-inside {
+// 			h2{width:25%;}
+// 		}
+// 	}
 
-	@include bp(tb) {
-		.tos-inside {
-			h2{width:30%; font-size: 1.5rem;}
-		}
-	}
+// 	@include bp(tb) {
+// 		.tos-inside {
+// 			h2{width:30%; font-size: 1.5rem;}
+// 		}
+// 	}
 
-	@include bp(tn) {
-		.tos-inside {
-			h2{width:40%;}
-		}
-	}
+// 	@include bp(tn) {
+// 		.tos-inside {
+// 			h2{width:40%;}
+// 		}
+// 	}
 
-	@include bp(mb) {
-		.tos-inside {
-			h2{width:50%; }
-		}
-	}
+// 	@include bp(mb) {
+// 		.tos-inside {
+// 			h2{width:50%; }
+// 		}
+// 	}
 
-	@include bp(md) {
-		.tos-inside {padding: 20px;
-			.intro-logo {width:80%;}
-			h2{font-size: 1.1rem;}
-		}
-	}
+// 	@include bp(md) {
+// 		.tos-inside {padding: 20px;
+// 			.intro-logo {width:80%;}
+// 			h2{font-size: 1.1rem;}
+// 		}
+// 	}
 
-	@include bp(sm) {
-		.tos-inside {
-			.intro-logo {width:90%;}
-			h2{width:80%;}
-		}
-	}
-}
+// 	@include bp(sm) {
+// 		.tos-inside {
+// 			.intro-logo {width:90%;}
+// 			h2{width:80%;}
+// 		}
+// 	}
+// }
 
 
 //*********************************//
@@ -150,7 +150,7 @@ hr{
 //*********************************//
 // NOTES -- if home nav is diff, ::before {height: 72%; margin-top:15%;} //
 
-.home-full {
+.home {
   .dbl-color-hero{@include sec-default(); padding:60px 0 40px; text-align:center; position: relative;
     // HOME NAV DIFF? &::before{@include before(); background-color: $gu-blue; height: 72%; margin-top:15%;}
     &::before{@include before(); background-color: $gu-blue;
