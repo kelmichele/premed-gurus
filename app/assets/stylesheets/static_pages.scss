@@ -890,9 +890,10 @@ hr{
 	}
 
 	.custom-ms.uk-modal .uk-modal-dialog{width:80%; @include center-block(); padding:15px;
-		.uk-modal-title {font-size:1.6rem; font-weight: 600;}
-		.uk-modal-footer .contact{display: inline-block; color: $gu-blue; font-weight: 600;
-			&.phone {float: right;}
+		.uk-modal-title , .adv-email {display: inline-block; float: left; width: 50%;}
+		.uk-modal-title {font-size:1.6rem; font-weight: 600; margin-bottom:0;}
+		.adv-email {float:right; text-align: right; margin-top:10px;
+			.email{ color: $gu-blue; font-weight: 600; font-size: 17px;}
 		}
 	}
 
@@ -925,6 +926,9 @@ hr{
 		}
 		.custom-ms.uk-modal .uk-modal-dialog{width:95%;
 			.uk-modal-title {font-size: 1.4rem;}
+			.adv-email {margin-top:5px;
+				.email{ font-size: 15px;}
+			}
 		}
 
 		.advisors-sec {padding:40px 0 60px;
@@ -976,6 +980,13 @@ hr{
 
 	@include bp(mb) {
 		.advisors-sec .inside.medi {width:85%;}
+	}
+
+	@include bp(md) {
+		.custom-ms.uk-modal .uk-modal-dialog{width:95%;
+			.adv-email, .uk-modal-title {@include sec-default(); text-align: left;}
+			.adv-email .email{ font-size: 15px;}
+		}
 	}
 
 	@include bp(ph) {
