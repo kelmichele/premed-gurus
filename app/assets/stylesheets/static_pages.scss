@@ -278,7 +278,7 @@ hr{
 	}
 
 	@include bp(tb) {
-		.dbl-color-hero{
+		.dbl-color-hero{padding-bottom:30px;
 			&::before{height: 47%;}
 			h1{font-size:2.2rem;}
 			h2 {font-size: 1.8rem;}
@@ -329,7 +329,7 @@ hr{
 	}
 
 	@include bp(tn) {
-		.dbl-color-hero{
+		.dbl-color-hero{padding-bottom: 20px;
 			h1{font-size:1.9rem;}
 			h2 {font-size: 1.6rem;}
 		}
