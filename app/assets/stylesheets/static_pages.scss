@@ -85,9 +85,9 @@ hr{
 
 .home {
   .dbl-color-hero{@include sec-default(); padding:60px 0 40px; text-align:center; position: relative;
-    // HOME NAV DIFF? &::before{@include before(); background-color: $gu-blue; height: 72%; margin-top:15%;}
-    &::before{@include before(); background-color: $gu-blue;
-    	height: 53%; margin-top:30%;
+    &::before{@include after(); background-color: $gu-blue;
+    	height: 53%;
+    	// margin-top:30%;
     }
     .hero-img{@include center-block(); margin-bottom: 20px;}
     .inside {width:90%;}
@@ -230,16 +230,30 @@ hr{
 	}
 
 
-	@media (min-width:1730px){
+	// @media (min-width:1900px){
+	// 	.dbl-color-hero{
+	// 	  &::before{@height: 320px !important; margin-top:20% !important;}
+	// 	}
+	// }
+
+	@media (min-width:1900px){
 		.dbl-color-hero{
-		  &::before{height: 50%; margin-top:20% !important;}
+			&::before{display: none;}
+		  &::after{@include after(); background-color: $gu-blue; height: 320px !important;}
 		}
 	}
 
+	// @media (min-width:1730px) {
+	@media (min-width:1730px) and (max-width:1900px){
+		// .dbl-color-hero{
+		//   &::before{height: 45% !important; margin-top:20% !important;}
+		// }
+	}
+
 	@media (min-width:1670px){
-		.dbl-color-hero{
-		  &::before{height: 50%; margin-top:22% !important;}
-		}
+		// .dbl-color-hero{
+		//   &::before{margin-top:22% !important;}
+		// }
 
 		.advisors-alt {
 			.full{ background-size: 24%; }
@@ -248,9 +262,9 @@ hr{
 
 
 	@media (min-width:1500px){
-		.dbl-color-hero{
-		  &::before{height: 50%; margin-top:24% !important;}
-		}
+		// .dbl-color-hero{
+		//   &::before{height: 50%; margin-top:24% !important;}
+		// }
 	}
 
 	@media (min-width:1349px) {
@@ -279,7 +293,7 @@ hr{
 
 	@include bp(dt) {
 		.dbl-color-hero{
-		  &::before{height: 53%; margin-top:26%;}
+		  // &::before{ margin-top:26%;}
 		}
 	}
 
@@ -291,7 +305,9 @@ hr{
 
 	@include bp(tb) {
 		.dbl-color-hero{
-			&::before{height: 47%; margin-top:30%;}
+			&::before{height: 47%;
+				// margin-top:30%;
+			}
 			h1{font-size:2.2rem;}
 			h2 {font-size: 1.8rem;}
 		}
@@ -342,7 +358,7 @@ hr{
 
 	@include bp(tn) {
 		.dbl-color-hero{
-			&::before{height: 50%; margin-top:30%;}
+			// &::before{height: 50%; margin-top:30%;}
 			h1{font-size:1.9rem;}
 			h2 {font-size: 1.6rem;}
 		}
@@ -444,7 +460,7 @@ hr{
 
 	@include bp(ph) {
 		.dbl-color-hero{
-			&::before{ margin-top:33%;}
+			// &::before{ margin-top:33%;}
 		}
 
 		.serve {padding-top:20px;
@@ -480,7 +496,7 @@ hr{
 	@include bp(sm) {
 		.dbl-color-hero{
 			h2 {font-size: 1.2rem;}
-		  &::before{ margin-top:38%;}
+		  // &::before{ margin-top:38%;}
 		}
 		.pbi {padding-bottom: 30px;
 			img{width:95%;}

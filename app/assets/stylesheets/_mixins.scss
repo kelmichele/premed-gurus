@@ -73,6 +73,16 @@
   z-index: -1;
 }
 
+@mixin after() {
+  content: "";
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height:100%;
+  z-index: -1;
+}
+
 @mixin bp($point) {
   @if $point == su {
     @media (min-width: 1440px) { @content ; }
