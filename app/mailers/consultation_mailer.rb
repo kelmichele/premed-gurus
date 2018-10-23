@@ -6,6 +6,7 @@ class ConsultationMailer < ApplicationMailer
 	  @consultation = consultation
 
 	  mail subject: "Consultation Request from Website"
-	  mail to: "kelli@hsdesignhouse.com"
+	  mail to: "info@premedgurus.com"
+	  # mail to: "kelli@hsdesignhouse.com"
 	end
 end
