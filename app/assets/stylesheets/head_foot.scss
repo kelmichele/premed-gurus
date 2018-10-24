@@ -86,11 +86,11 @@
 @include bp(tn) {
   .mobile-navrow {display: block;}
 
-  .header-block .mid-logo .hlogo, .home-header .hd-logo .hlogo {width:50%;}
+  .header-block .mid-logo .hlogo {width:55%;}
 }
 
 @include bp(sm) {
-  .header-block .mid-logo .hlogo, .home-header .hd-logo .hlogo {width:60%;}
+  .header-block .mid-logo .hlogo {width:65%;}
 }
 
 
