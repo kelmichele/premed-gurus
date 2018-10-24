@@ -1,7 +1,6 @@
 <% @page_title = "Medical School Advising Services" %>
 <% @page_description = "PreMed Gurus offers our complete range of services for premedical students at every stage of the med school application process. Contact us today for a quote!" %>
 
-
 <div class="details">
 	<div class="inside medi">
 		<div class="sec">
@@ -15,7 +14,7 @@
 			</div>
 
 			<div class="abs">
-				<p>Please note that for a limited time, PreMed Gurus is offering a 20% discount on all services listed below to well qualified new clients. Prices shown below do not include discount.</p>
+				<p>Please note that for a limited time, PreMed Gurus is offering a 20% discount on all services listed below to well qualified new clients. Prices shown below do not include discount. Payment options include: credit card, debit card, and PayPal.</p>
 			</div>
 		</div>
 	</div>
@@ -29,8 +28,6 @@
 	</div>
 
 	<div class="inside cst">
-
-
 		<div uk-filter="target: .js-filter">
 			<div class="sidebar">
 		    <ul class="cat-list">
@@ -49,8 +46,14 @@
 				  <li class="side-menu addit"><%= link_to "Request a Consult", consultation_path %></li>
 				  <li class="side-menu addit"><%= link_to "Hire the Gurus", hire_gurus_path %></li>
 				  <li class="side-menu addit"><a class="" href="#modal-fees" uk-toggle>Full Price List</a></li>
+				  <!-- <li class="side-menu addit"><a class="" href="#modal-payment" uk-toggle>Payment Options</a></li> -->
 				  <li class="side-menu addit"><%= link_to "Gaining Admission to Medical School", book_details_path %></li>
 		    </ul>
+
+				<div class="pay-box">
+					<p><span>Payment options include:</span><br>
+					Credit Card, Debit Card, PayPal</p>
+				</div>
 		  </div>
 
 			<div class="main-sec">

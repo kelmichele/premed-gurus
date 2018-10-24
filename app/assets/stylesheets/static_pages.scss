@@ -525,9 +525,11 @@ hr{
 			li {border-color: rgba($f7, .3); }
 			li, a {color:$white; }
 		}
-		// background-color: $gu-blue;
-		// .cat-list a {color:$white; }
-		// ul.additional{background-color: $blue;}
+
+		.pay-box {padding: 15px 30px 5px;
+			p{color: $blue; font-weight: bold; font-size: 17px; line-height: 1.6em; text-align: left;}
+			p span {color: $navy}
+		}
 	}
 	.main-sec {width: 67%; float: right;}
 	.uk-grid {margin-left: 0;}
@@ -1100,7 +1102,6 @@ hr{
 }
 
 
-
 //*********************************//
 //*********** consult ***********//
 //*********************************//
@@ -1408,6 +1409,12 @@ form.new_contract  {
 	}
 }
 
+
+
+//*********************************//
+//********* testimonials **********//
+//*********************************//
+.testimonials {@include sec-default();}
 
 
 

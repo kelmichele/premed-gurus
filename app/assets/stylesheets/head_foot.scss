@@ -14,23 +14,6 @@
 //*********** main header ***********//
 //*********************************//
 
-//   .site-nav {
-//     @include sec-default(); background-color: $gu-blue; padding: 7px 0; text-align: center;
-//     li {display: inline-block; margin:5px 15px;
-//       a {color: $white; font-size:17px;}
-//     }
-//     li.ft-logo{display: none;}
-//     li.mobile-serve{display: none;}
-//   }
-//   .email {position:absolute; right:3%; color: $white; margin-top:5px;
-//     // color:$black; top:20%;
-//   }
-//   @include bp(tn) {
-//     .site-nav {display: none;}
-//   }
-// }
-
-
 .header-block {
   @include sec-default();
 
@@ -53,7 +36,7 @@
   }
 
   @include bp(tb) {
-    .mid-logo .hlogo {width:40%;}
+    .mid-logo .hlogo {width:45%;}
     .site-nav li{margin:5px 10px;
       a {font-size: 16px;}
 
@@ -79,46 +62,6 @@
   }
 }
 
-
-//*********************************//
-//*********** home header ***********//
-//*********************************//
-.home-header {
-  .nav-row{padding-top:25px;}
-  ul.one, ul.two, .hd-logo {display: inline-block; float: left; width:30%;
-    li {display: inline-block;
-      margin:5px 6px;
-    }
-  }
-
-  .hd-logo {width:33%; float:none; text-align: center;
-		.hlogo {@include center-block();}
-  }
-
-  ul.two {float: right; padding-left: 0; text-align: right;}
-
-
-  .uk-navbar-container:not(.uk-navbar-transparent){background-color: transparent;}
-  .uk-navbar-nav {
-    li a { color: $black; font-size:17px;}
-  }
-
-  .uk-navbar-dropdown-nav {
-    li a {font-size: 16px;}
-  }
-
-
-
-
-  @include bp(tn) {
-    .nav-row{@include sec-default(); padding:0;}
-    ul.one, ul.two {display: none;}
-    .hd-logo {@include sec-default(); text-align: center; padding:25px 0 20px;
-      .hlogo {@include center-block();}
-    }
-  }
-}
-
 //*********************************//
 //*********** mobile menu **********//
 //*********************************//
@@ -128,7 +71,9 @@
   .uk-icon>* {color:$white;}
 
   .mnav-btn, .mnr-email {display: inline-block; float: left;}
-  .mnav-btn {margin-left: 5%;}
+  .mnav-btn {margin-left: 5%;
+    .uk-icon {color:$white;}
+  }
   .mnr-email{float: right; color: $white; margin-right: 5%;}
 }
 
@@ -141,7 +86,7 @@
 @include bp(tn) {
   .mobile-navrow {display: block;}
 
-  .header-block .mid-logo .hlogo, .home-header .hd-logo .hlogo {width:45%;}
+  .header-block .mid-logo .hlogo, .home-header .hd-logo .hlogo {width:50%;}
 }
 
 @include bp(sm) {
