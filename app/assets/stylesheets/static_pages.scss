@@ -1436,11 +1436,16 @@ form.new_contract  {
 	}
 
 	@include bp(mb) {
+		.inside {width:90%;}
 		.testislide{width:95%;
 			&:nth-child(2) {width:95%;}
 			.uk-card{background-size: 10%;}
 		}
 	}
+}
+
+.home .testimonials{padding:30px 0 10px;
+	.testislide{width:95%;}
 }
 
 
