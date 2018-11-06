@@ -1423,8 +1423,7 @@ form.new_contract  {
 	.testislide{width:65%;
 		&:nth-child(2) {width:75%;}
 
-		.uk-card{@include sec-bgimage('logo-heart.png'); background-size: 8%; background-position: bottom right;
-		}
+		.uk-card{@include sec-bgimage('logo-heart.png'); background-size: 8%; background-position: bottom right;}
 	}
 
 	@include bp(tn) {
@@ -1440,6 +1439,12 @@ form.new_contract  {
 		.testislide{width:95%;
 			&:nth-child(2) {width:95%;}
 			.uk-card{background-size: 10%;}
+		}
+	}
+
+	@include bp(sm) {
+		.testislide {
+			.uk-card{background-image: none;}
 		}
 	}
 }
