@@ -1414,7 +1414,35 @@ form.new_contract  {
 //*********************************//
 //********* testimonials **********//
 //*********************************//
-.testimonials {@include sec-default();}
+.testimonials {@include sec-default(); padding: 50px 0; background-color:$f9; background-color: rgba($gu-blue, .1);
+	p, span, h3 {font-family: $lato; }
+	p, span {font-size: 15px;}
+	span{font-weight: bold; color: $blue;}
+	h3{font-weight: bold; border-bottom: 1px solid rgba($black, .1); padding-bottom: 5px; letter-spacing: .3px; }
+
+	.testislide{width:65%;
+		&:nth-child(2) {width:75%;}
+
+		.uk-card{@include sec-bgimage('logo-heart.png'); background-size: 8%; background-position: bottom right;
+		}
+	}
+
+	@include bp(tn) {
+		padding:30px 0 15px;
+		.testislide{width:80%;
+			&:nth-child(2) {width:94%;}
+			.uk-card{background-size: 10%;}
+		}
+	}
+
+	@include bp(mb) {
+		.testislide{width:95%;
+			&:nth-child(2) {width:95%;}
+			.uk-card{background-size: 10%;}
+		}
+	}
+}
+
 
 
 
