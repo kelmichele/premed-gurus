@@ -1136,7 +1136,7 @@ hr{
 
 		select {width: 40%;}
 		textarea {height: 90px;padding: 5px; width:60%;}
-		.send-message {width: 25%; height: 45px;padding: 10px 30px; background-color: $pink; color: $white; font-weight: bold; font-size: 16px; letter-spacing: .5px;}
+		.send-message {width: 25%; height: auto;padding: 10px 15px; background-color: $pink; color: $white; font-weight: bold; font-size: 16px; letter-spacing: .5px; text-align: center;}
 
 		.form-group {
 			width: 45%; display: inline-block;
@@ -1165,6 +1165,14 @@ hr{
 			.form-group {width: 90%;
 				&.name, &.address, &.phone, &.email, &.college, &.major, &.school, &.ugrad, &.target, &.attempt2, &.message, &.submit {width: 90%; }
 			}
+			.send-message {width: 40%; font-size: 15px;}
+		}
+
+		@media (max-width:639px) {
+			.form-group {@include sec-default();
+				&.name, &.address, &.phone, &.email, &.college, &.major, &.school, &.ugrad, &.target, &.attempt2, &.message, &.submit {@include sec-default();}
+			}
+			textarea {margin-bottom: 15px;}
 		}
 	}
 
