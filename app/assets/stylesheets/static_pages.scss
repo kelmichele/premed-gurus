@@ -1126,7 +1126,7 @@ hr{
 		hr {margin-top:5px;}
 		h3.sec-title {margin-bottom: 0; font-weight: 500;}
 
-		label {font-size: 15px; color: $black;
+		label {font-size: 15px; color: $black; @include sec-default();
 			b,strong {color: $gu-blue;}
 		}
 
@@ -1149,6 +1149,22 @@ hr{
 			&.attempt2 textarea {height:70px;}
 			&.message label {width:55%;}
 			&.submit {padding-bottom: 0;}
+		}
+
+		@include bp(tn) {
+			h3.sec-title {text-align: center;}
+			.form-group {
+				width: 55%; @include center-block();
+				&.name, &.address, &.phone, &.email, &.college, &.major, &.school, &.ugrad, &.target, &.attempt2, &.message, &.submit {width: 70%; @include center-block();}
+				&.message label {@include sec-default();}
+			}
+			textarea {@include sec-default(); margin-bottom: 30px;}
+		}
+
+		@include bp(mb) {
+			.form-group {width: 90%;
+				&.name, &.address, &.phone, &.email, &.college, &.major, &.school, &.ugrad, &.target, &.attempt2, &.message, &.submit {width: 90%; }
+			}
 		}
 	}
 
@@ -1223,6 +1239,7 @@ hr{
 
 	  .full-sec.btm{
 	  	.inside.medi {width:90%;}
+	  	form h3.sec-title{margin-left: 0}
 	  }
   }
 
