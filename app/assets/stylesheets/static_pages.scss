@@ -1159,6 +1159,7 @@ hr{
 				&.message label {@include sec-default();}
 			}
 			textarea {@include sec-default(); margin-bottom: 30px;}
+			select {@include sec-default();}
 		}
 
 		@include bp(mb) {
